@@ -14,6 +14,7 @@
   <run_depend>phantomx_pincher_arm_bringup</run_depend>
   <run_depend>phantomx_pincher_arm_moveit_config</run_depend>
   <run_depend>phantomx_pincher_arm_ikfast_plugin</run_depend>
-  
+  <run_depend>phantomx_pincher_arm_block_manipulation</run_depend>
+
   <export><metapackage/></export>
 </package>
