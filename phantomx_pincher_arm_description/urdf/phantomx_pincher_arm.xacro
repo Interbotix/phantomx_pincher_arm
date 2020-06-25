@@ -17,15 +17,14 @@
     <transmission name="arm_shoulder_pan_transmission">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="arm_shoulder_pan_joint">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
       <actuator name="arm_shoulder_pan_actuator">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
 
-    <!-- shoulder lift joint -->
+    <!-- shoulder bicep joint -->
     <pincher_bicep parent="arm_shoulder_pan_link" name="arm_bicep" color="${color}"
                          vlimit="${joints_vlimit}" llimit="${shoulder_llimit}" ulimit="${shoulder_ulimit}">
       <origin xyz="0 0 0.027" rpy="0 0 0"/>
@@ -34,27 +33,25 @@
     <transmission name="arm_bicep_transmission">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="arm_bicep_joint">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
       <actuator name="arm_bicep_actuator">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
 
-    <!-- elbow joint -->
+    <!-- forearm joint -->
     <pincher_forearm parent="arm_bicep_link" name="arm_forearm" color="${color}"
                          vlimit="${joints_vlimit}" llimit="${elbow_llimit}" ulimit="${elbow_ulimit}">
       <origin xyz="0.0325 0 0.104" rpy="0 0 0"/>
     </pincher_forearm>
-   
+
     <transmission name="arm_forearm_transmission">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="arm_forearm_joint">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
       <actuator name="arm_forearm_actuator">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
@@ -67,10 +64,9 @@
     <transmission name="arm_wrist_flex_transmission">
       <type>transmission_interface/SimpleTransmission</type>
       <joint name="arm_wrist_flex_joint">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       </joint>
       <actuator name="arm_wrist_flex_actuator">
-        <hardwareInterface>EffortJointInterface</hardwareInterface>
         <mechanicalReduction>1</mechanicalReduction>
       </actuator>
     </transmission>
